@@ -159,8 +159,8 @@ header[data-testid="stHeader"] {
 .row-best td *, .row-active td *, .row-both td * { color: #E1D4C2 !important; }
 .row-best td span, .row-active td span, .row-both td span { color: #E1D4C2 !important; }
 
-.badge-best   { background: #E1D4C2; color: #291C0E; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-left: 6px; }
-.badge-active { background: #BEB5A9; color: #291C0E; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-left: 6px; }
+.badge-best   { background: #A78D78; color: #E1D4C2; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-left: 6px; }
+.badge-active { background: #6E473B; color: #E1D4C2; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-left: 6px; }
 
 .bar-mini { display: inline-block; background: var(--accent); border-radius: 2px; height: 6px; vertical-align: middle; margin-right: 5px; opacity: 0.7; }
 
