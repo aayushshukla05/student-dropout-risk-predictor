@@ -505,7 +505,7 @@ st.markdown(f"""
     <div class="meta-row">
         <span><span class="meta-dot"></span>15,000 Students Trained</span>
         <span><span class="meta-dot"></span>6 Algorithms Compared</span>
-        <span class="algo-badge">🔬 {selected_algo}</span>
+        <span class="algo-badge">{selected_algo}</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -561,7 +561,7 @@ else:
 
     # Active model note
     is_best_active = (selected_algo == best_model_name)
-    note = "★ Best-performing model" if is_best_active else f"Switch to <b>{best_model_name}</b> in the sidebar for the highest-accuracy prediction"
+    note = "Best-performing model" if is_best_active else f"Switch to <b>{best_model_name}</b> in the sidebar for the highest-accuracy prediction"
     st.markdown(f'<div class="algo-note">Using: <b>{selected_algo}</b> &nbsp;·&nbsp; {note}</div>', unsafe_allow_html=True)
 
     # Result banner
