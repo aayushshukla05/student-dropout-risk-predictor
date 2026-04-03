@@ -1,0 +1,8 @@
+cat > .gitignore << 'EOF'
+.DS_Store
+*.csv
+*.png
+encoders.pkl
+scaler.pkl
+best_model.pkl
+student_dropout_prediction.ipynb
