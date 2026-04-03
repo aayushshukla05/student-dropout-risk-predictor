@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="EduPredict · Dropout Risk",
-    page_icon=None,
+    page_icon="🎓",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -156,6 +156,8 @@ header[data-testid="stHeader"] {
 .row-both    { background: #291C0E !important; color: #E1D4C2 !important; }
 
 .row-best td, .row-active td, .row-both td { color: #E1D4C2 !important; }
+.row-best td *, .row-active td *, .row-both td * { color: #E1D4C2 !important; }
+.row-best td span, .row-active td span, .row-both td span { color: #E1D4C2 !important; }
 
 .badge-best   { background: #E1D4C2; color: #291C0E; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-left: 6px; }
 .badge-active { background: #BEB5A9; color: #291C0E; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-left: 6px; }
@@ -315,7 +317,7 @@ with st.sidebar:
         <div style="font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:#A78D78;margin-top:3px">Student Risk Analyser</div>
     </div>
     <hr class="sb-sep">
-    <span class="sb-label">Algorithm</span>
+    <span class="sb-label">🔬 Algorithm</span>
     """, unsafe_allow_html=True)
 
     available_models = list(all_models.keys())
@@ -462,15 +464,16 @@ def model_comparison_html(active_algo, best_algo):
         def fmt(v):
             return f"{v*100:.1f}%"
 
+        name_color = "color:#E1D4C2" if (is_best or is_active) else ""
         rows += f"""
         <tr class="{row_cls}">
-            <td><span style="font-weight:500">{name}</span>{badges}</td>
+            <td><span style="font-weight:500;{name_color}">{name}</span>{badges}</td>
             <td>
-                <span class="bar-mini" style="width:{bar_w}px"></span>{fmt(m['accuracy'])}
+                <span class="bar-mini" style="width:{bar_w}px"></span><span style="{name_color}">{fmt(m['accuracy'])}</span>
             </td>
-            <td>{fmt(m['precision'])}</td>
-            <td>{fmt(m['recall'])}</td>
-            <td><b>{fmt(m['f1'])}</b></td>
+            <td><span style="{name_color}">{fmt(m['precision'])}</span></td>
+            <td><span style="{name_color}">{fmt(m['recall'])}</span></td>
+            <td><b><span style="{name_color}">{fmt(m['f1'])}</span></b></td>
         </tr>"""
 
     return f"""
@@ -502,7 +505,7 @@ st.markdown(f"""
     <div class="meta-row">
         <span><span class="meta-dot"></span>15,000 Students Trained</span>
         <span><span class="meta-dot"></span>6 Algorithms Compared</span>
-        <span class="algo-badge">{selected_algo}</span>
+        <span class="algo-badge">🔬 {selected_algo}</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -559,7 +562,7 @@ else:
     # Active model note
     is_best_active = (selected_algo == best_model_name)
     note = "★ Best-performing model" if is_best_active else f"Switch to <b>{best_model_name}</b> in the sidebar for the highest-accuracy prediction"
-    st.markdown(f'<div class="algo-note">Using: <b>{selected_algo}</b> &nbsp;·&nbsp; {note}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="algo-note">🔬 Using: <b>{selected_algo}</b> &nbsp;·&nbsp; {note}</div>', unsafe_allow_html=True)
 
     # Result banner
     if is_complete:
@@ -653,7 +656,7 @@ else:
             strength = "submission count" if submission_count >= 8 else "assessment performance"
             st.markdown(f"""
             <div class="insight-box">
-                <strong>Key Insight —</strong>
+                <strong>💡 Key Insight —</strong>
                 This student's <strong>{strength}</strong> is the strongest positive signal.
                 With {submission_count} submissions and an average of {avg_score}%, this profile
                 closely matches students who completed their courses.
