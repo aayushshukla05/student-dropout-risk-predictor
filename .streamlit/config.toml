@@ -1,7 +1,6 @@
-mkdir .streamlit
 cat > .streamlit/config.toml << 'EOF'
 [theme]
-primaryColor = "#6E473B"
+primaryColor = "#291C0E"
 backgroundColor = "#E1D4C2"
 secondaryBackgroundColor = "#BEB5A9"
 textColor = "#291C0E"
