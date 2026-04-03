@@ -546,7 +546,7 @@ if not predict_btn:
     </div>""", unsafe_allow_html=True)
 
 
-# ── PREDICTION ────────────────────────────────────────────────────────────────
+
 else:
     model = all_models.get(selected_algo)
     if model is None:
@@ -585,7 +585,7 @@ else:
     else:
         st.markdown(f"""
         <div class="result-wrap result-dropout">
-            <div class="result-badge badge-dropout">⚠ At Risk</div>
+            <div class="result-badge badge-dropout">At Risk</div>
             <div class="result-title">Dropout Risk Detected</div>
             <div class="result-sub">This student may benefit from early academic support and engagement check-ins.</div>
             <div class="prob-row">
