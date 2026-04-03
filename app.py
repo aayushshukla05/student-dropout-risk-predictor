@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="EduPredict · Dropout Risk",
-    page_icon="🎓",
+    page_icon=None,
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -653,7 +653,7 @@ else:
             strength = "submission count" if submission_count >= 8 else "assessment performance"
             st.markdown(f"""
             <div class="insight-box">
-                <strong>💡 Key Insight —</strong>
+                <strong>Key Insight —</strong>
                 This student's <strong>{strength}</strong> is the strongest positive signal.
                 With {submission_count} submissions and an average of {avg_score}%, this profile
                 closely matches students who completed their courses.
