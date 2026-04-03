@@ -1,0 +1,51 @@
+{
+  "Random Forest": {
+    "accuracy": 0.8433,
+    "precision": 0.8032,
+    "recall": 0.8849,
+    "f1": 0.8421
+  },
+  "Decision Tree": {
+    "accuracy": 0.795,
+    "precision": 0.79,
+    "recall": 0.7705,
+    "f1": 0.7801
+  },
+  "Logistic Regression": {
+    "accuracy": 0.8163,
+    "precision": 0.7789,
+    "recall": 0.8531,
+    "f1": 0.8143
+  },
+  "SVM": {
+    "accuracy": 0.8153,
+    "precision": 0.7766,
+    "recall": 0.8545,
+    "f1": 0.8137
+  },
+  "KNN": {
+    "accuracy": 0.7973,
+    "precision": 0.7567,
+    "recall": 0.8411,
+    "f1": 0.7967
+  },
+  "Naive Bayes": {
+    "accuracy": 0.7983,
+    "precision": 0.7329,
+    "recall": 0.9011,
+    "f1": 0.8084
+  },
+  "_best": "Random Forest",
+  "_features": [
+    "gender",
+    "region",
+    "highest_education",
+    "imd_band",
+    "age_band",
+    "num_of_prev_attempts",
+    "disability",
+    "avg_score",
+    "submission_count",
+    "days_to_start"
+  ]
+}
