@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="EduPredict · Dropout Risk",
-    page_icon="🎓",
+    page_icon=None,
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -317,7 +317,7 @@ with st.sidebar:
         <div style="font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:#A78D78;margin-top:3px">Student Risk Analyser</div>
     </div>
     <hr class="sb-sep">
-    <span class="sb-label">🔬 Algorithm</span>
+    <span class="sb-label">Algorithm</span>
     """, unsafe_allow_html=True)
 
     available_models = list(all_models.keys())
@@ -338,7 +338,7 @@ with st.sidebar:
     if selected_algo in metrics and selected_algo != '_best':
         m = metrics[selected_algo]
         is_best = (selected_algo == best_model_name)
-        tag = " ★ Best" if is_best else ""
+        tag = " Best" if is_best else ""
         st.markdown(
             f'<div style="font-size:0.72rem;color:#E1D4C2;margin:-4px 0 8px;padding:6px 8px;'
             f'background:#6E473B;border-radius:6px;">'
@@ -562,13 +562,13 @@ else:
     # Active model note
     is_best_active = (selected_algo == best_model_name)
     note = "★ Best-performing model" if is_best_active else f"Switch to <b>{best_model_name}</b> in the sidebar for the highest-accuracy prediction"
-    st.markdown(f'<div class="algo-note">🔬 Using: <b>{selected_algo}</b> &nbsp;·&nbsp; {note}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="algo-note">Using: <b>{selected_algo}</b> &nbsp;·&nbsp; {note}</div>', unsafe_allow_html=True)
 
     # Result banner
     if is_complete:
         st.markdown(f"""
         <div class="result-wrap result-complete">
-            <div class="result-badge badge-complete">✓ Low Risk</div>
+            <div class="result-badge badge-complete">Low Risk</div>
             <div class="result-title">Likely to Complete</div>
             <div class="result-sub">This student's profile closely aligns with successful course completers in the training data.</div>
             <div class="prob-row">
@@ -656,7 +656,7 @@ else:
             strength = "submission count" if submission_count >= 8 else "assessment performance"
             st.markdown(f"""
             <div class="insight-box">
-                <strong>💡 Key Insight —</strong>
+                <strong>Key Insight —</strong>
                 This student's <strong>{strength}</strong> is the strongest positive signal.
                 With {submission_count} submissions and an average of {avg_score}%, this profile
                 closely matches students who completed their courses.
