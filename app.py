@@ -669,7 +669,7 @@ else:
             )
             st.markdown(f"""
             <div class="insight-warn">
-                <strong>⚠ Suggested Action —</strong>
+                <strong>Suggested Action —</strong>
                 The most significant risk factor is this student's <strong>{weakest}</strong>.
                 Early outreach, assignment reminders, and peer mentoring have been shown to
                 improve retention for this profile. Consider flagging for pastoral support.
