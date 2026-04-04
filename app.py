@@ -503,7 +503,7 @@ st.markdown(f"""
     <div class="eyebrow">ML-Powered · OULAD Dataset · 10 Features</div>
     <h1 class="page-title">Student <em>Dropout</em><br>Risk Predictor</h1>
     <div class="meta-row">
-        <span><span class="meta-dot"></span>15,000 Students Trained</span>
+        <span><span class="meta-dot"></span>Trained on 15000 students</span>
         <span><span class="meta-dot"></span>6 Algorithms Compared</span>
         <span class="algo-badge">{selected_algo}</span>
     </div>
