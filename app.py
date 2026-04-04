@@ -522,19 +522,19 @@ if not predict_btn:
         </div>
         <div style="font-size:0.88rem;color:#291C0E;line-height:1.75;">
             This app uses machine learning to predict whether a student is likely to complete or drop out of their course,
-            based on data from the Open University Learning Analytics Dataset (OULAD).
+            based on data from the <strong>Open University Learning Analytics Dataset (OULAD)</strong>.
             Six classical ML algorithms were trained on 15,000 student records across 10 features.
         </div>
         <div style="margin-top:1.2rem;font-size:0.88rem;color:#291C0E;line-height:1.75;">
             <strong style="color:#6E473B;">How to use it</strong><br>
-            Fill in the student profile fields in the sidebar on the left — demographics, academic background,
+            Fill in the student profile fields in the sidebar on the left-demographics, academic background,
             assessment performance, and registration timing. Once you click <strong>Analyse Risk Now</strong>,
             the model will output a completion or dropout prediction along with a probability score and a breakdown of key risk factors.
         </div>
         <div style="margin-top:1.2rem;font-size:0.88rem;color:#291C0E;line-height:1.75;">
             <strong style="color:#6E473B;">Interpreting the result</strong><br>
             A <strong>Likely to Complete</strong> result means the student's profile closely matches students who finished their course.
-            A <strong>Dropout Risk Detected</strong> result flags the student for early intervention — the app will highlight the
+            A <strong>Dropout Risk Detected</strong> result flags the student for early intervention. The app will highlight the
             most significant risk factor and suggest a course of action.
             You can also switch between the six trained algorithms using the selector at the top of the sidebar.
         </div>
@@ -556,7 +556,7 @@ if not predict_btn:
         <div class="risk-card">
             <div class="risk-num">#1</div>
             <div class="risk-title">Assessment Submissions</div>
-            <div class="risk-desc">Submitting consistently — even with modest scores — is the single strongest predictor of course completion.</div>
+            <div class="risk-desc">Submitting consistently-even with modest scores-is the single strongest predictor of course completion.</div>
         </div>
         <div class="risk-card">
             <div class="risk-num">#2</div>
