@@ -514,11 +514,34 @@ st.markdown(f"""
 # ── IDLE ──────────────────────────────────────────────────────────────────────
 if not predict_btn:
     st.markdown("""
+    <div style="max-width:720px;margin-bottom:2rem;">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#291C0E;margin-bottom:0.8rem;font-weight:400;">
+            About this tool
+        </div>
+        <div style="font-size:0.88rem;color:#291C0E;line-height:1.75;">
+            This app uses machine learning to predict whether a student is likely to complete or drop out of their course,
+            based on data from the Open University Learning Analytics Dataset (OULAD).
+            Six classical ML algorithms were trained on 15,000 student records across 10 features — no deep learning is used.
+        </div>
+        <div style="margin-top:1.2rem;font-size:0.88rem;color:#291C0E;line-height:1.75;">
+            <strong style="color:#6E473B;">How to use it</strong><br>
+            Fill in the student profile fields in the sidebar on the left — demographics, academic background,
+            assessment performance, and registration timing. Once you click <strong>Analyse Risk Now</strong>,
+            the model will output a completion or dropout prediction along with a probability score and a breakdown of key risk factors.
+        </div>
+        <div style="margin-top:1.2rem;font-size:0.88rem;color:#291C0E;line-height:1.75;">
+            <strong style="color:#6E473B;">Interpreting the result</strong><br>
+            A <strong>Likely to Complete</strong> result means the student's profile closely matches students who finished their course.
+            A <strong>Dropout Risk Detected</strong> result flags the student for early intervention — the app will highlight the
+            most significant risk factor and suggest a course of action.
+            You can also switch between the six trained algorithms using the selector at the top of the sidebar.
+        </div>
+    </div>
     <div class="idle-prompt">
         ← Fill in the student profile on the left, then click <strong>Analyse Risk Now</strong>
     </div>""", unsafe_allow_html=True)
 
-    # Model comparison table
+    
     st.markdown('<div class="sec-title">All Model Performance</div>', unsafe_allow_html=True)
     st.markdown(model_comparison_html(selected_algo, best_model_name), unsafe_allow_html=True)
 
