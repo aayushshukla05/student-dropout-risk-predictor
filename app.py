@@ -55,6 +55,8 @@ html, body, [class*="css"] { font-family: var(--sans); background: #E1D4C2 !impo
 [data-testid="stAppViewBlockContainer"], [data-testid="block-container"],
 section.main, section.main > div { background: #E1D4C2 !important; }
 
+[data-testid="block-container"] { padding-top: 1rem !important; }
+
 /* Force all text dark unless overridden */
 .stApp p, .stApp span, .stApp div, .stApp label { color: #291C0E; }
 
@@ -521,7 +523,7 @@ if not predict_btn:
         <div style="font-size:0.88rem;color:#291C0E;line-height:1.75;">
             This app uses machine learning to predict whether a student is likely to complete or drop out of their course,
             based on data from the Open University Learning Analytics Dataset (OULAD).
-            Six classical ML algorithms were trained on 15,000 student records across 10 features — no deep learning is used.
+            Six classical ML algorithms were trained on 15,000 student records across 10 features.
         </div>
         <div style="margin-top:1.2rem;font-size:0.88rem;color:#291C0E;line-height:1.75;">
             <strong style="color:#6E473B;">How to use it</strong><br>
